@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "watchify ./src/main.js -o ./src/bundle.js",
+    "watch": "watchify ./src/main.js -o ./src/bundle.js",
     "build": "browserify ./src/main.js -o ./src/bundle.js",
-    "serve": "reload -b -d src"
+    "serve": "reload -b -d src",
+    "start": "concurrently \"npm run watch\" \"npm run serve\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^5.2.0",
     "fuse.js": "^6.0.4",
     "reload": "^3.1.0"
   },

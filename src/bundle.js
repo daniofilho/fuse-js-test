@@ -24692,6 +24692,6 @@ const Fuse = require('fuse.js');
 
 const data = require('./data.js');
 
-console.log('Setup OK');
+console.log('Setup OK!');
 
 },{"./data.js":2,"fuse.js":1}]},{},[3]);

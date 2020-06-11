@@ -1,5 +1,5 @@
 Arguments: 
-  /home/daniofilho/.nvm/versions/node/v12.13.1/bin/node /usr/share/yarn/bin/yarn.js dev
+  /home/daniofilho/.nvm/versions/node/v12.13.1/bin/node /usr/share/yarn/bin/yarn.js add concurrentrly
 
 PATH: 
   /home/daniofilho/.nvm/versions/node/v12.13.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/daniofilho/Android/Sdk/emulator:/home/daniofilho/Android/Sdk/tools:/home/daniofilho/Android/Sdk/tools/bin:/home/daniofilho/Android/Sdk/platform-tools
@@ -14,12 +14,17 @@ Platform:
   linux x64
 
 Trace: 
-  SyntaxError: /home/daniofilho/Trabalho/Github/fuse-js-test/package.json: Unexpected token } in JSON at position 259
-      at JSON.parse (<anonymous>)
-      at /usr/share/yarn/lib/cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (/usr/share/yarn/lib/cli.js:304:30)
-      at /usr/share/yarn/lib/cli.js:315:13
+  Error: https://registry.yarnpkg.com/concurrentrly: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66926:18)
+      at Request.self.callback (/usr/share/yarn/lib/cli.js:140564:22)
+      at Request.emit (events.js:210:5)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141536:10)
+      at Request.emit (events.js:210:5)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141458:12)
+      at Object.onceWrapper (events.js:299:28)
+      at IncomingMessage.emit (events.js:215:7)
+      at endReadableNT (_stream_readable.js:1184:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
 
 npm manifest: 
   {
@@ -30,7 +35,7 @@ npm manifest:
     "scripts": {
       "dev": "watchify ./src/main.js -o ./src/bundle.js",
       "build": "browserify ./src/main.js -o ./src/bundle.js",
-      "serve": "reload -b -d src",
+      "serve": "reload -b -d src"
     },
     "author": "",
     "license": "ISC",

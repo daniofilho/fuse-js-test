@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "reload -b"
+    "serve": "reload -b -d src",
+    "dev": "babel ./src/main.js -o ./src/bundle.js -w"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "browserify": "^16.5.1",
     "fuse.js": "^6.0.4",
     "reload": "^3.1.0"
   }

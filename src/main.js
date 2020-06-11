@@ -1,5 +1,5 @@
-import Fuse from 'fuse.js';
+const Fuse = require('fuse.js');
 
-import data from './data.js';
+const data = require('./data.js');
 
-console.log('ok né');
+console.log('Setup OK');
